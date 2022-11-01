@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@500&family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
   <script src="./main.js" defer></script>
   
   <title>Frontend Mentor | Interactive rating component</title>
@@ -16,28 +17,40 @@
 <body>
 
   <!-- Rating state start -->
+  <main class="container">
+  <div class="star"><img class="star--image" src="images/icon-star.svg" alt=""></div>
+  <h1>  How did we do?</h1>
+  <p class="basic_text"> Please let us know how we did with your support request. All feedback is appreciated 
+    to help us improve our offering!</p>
+  <form action="feedback.html" class="rating--form">
+    <div class="radio">
+    <input class="radio__input" type="radio" name="rate" id="myradio1">
+    <label for="myradio1" class="radio__label">1</label>
+    <input class="radio__input" type="radio" name="rate" id="myradio2">
+    <label for="myradio2" class="radio__label">2</label>
+    <input class="radio__input" type="radio" name="rate" id="myradio3">
+    <label for="myradio1" class="radio__label">3</label>
+    <input class="radio__input" type="radio" name="rate" id="myradio4">
+    <label for="myradio4" class="radio__label">4</label>
+    <input class="radio__input" type="radio" name="rate" id="myradio5">
+    <label for="myradio5" class="radio__label">5</label>
 
-  How did we do?
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+  </div>
 
-  1 2 3 4 5
+    <input type="submit" class="rating--submit" value="SUBMIT">
+  </form>
 
-  Submit
+</main>
+
+
+ 
+
+
 
   <!-- Rating state end -->
 
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
+ 
 
   
   <div class="attribution">
