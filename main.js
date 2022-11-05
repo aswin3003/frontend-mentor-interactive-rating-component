@@ -1,8 +1,19 @@
 console.log("script loaded")
-// const ratingItems=[...(document.querySelectorAll(".rating--item"))]
-// const ratingScore=[...(document.querySelectorAll(".rating--text"))]
-// const scoreMessage=document.querySelector(".rating_confirmation")
-// const submitButton=document.querySelector(".rating--submit")
+const radioButtons=[...(document.querySelectorAll(".radio__input"))]
+const submitButton=document.querySelector(".rating--submit")
+for(let radioButton of radioButtons){
+    radioButton.addEventListener("click",()=>{if(radioButton.checked)
+        {submitButton.classList.replace("rating--submit","rating--submit--ready")}})
+}
+const scoreMessage=document.querySelector(".rating_confirmation")
+scoreMessage.innerHTML=`You selected ${window.location.href[window.location.href.length-1]} out of 5`
+const form=document.querySelector(".rating--form")
+form.addEventListener('submit', event => {
+    const data = Object.fromEntries(new FormData(event.target))
+  
+    console.log(data)
+  })
+
 
 // console.log(ratingItems)
 // // ratingItems.forEach(e=>e.classList.replace("rating--item","rating--item--selected"))
